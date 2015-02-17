@@ -1,0 +1,222 @@
+/************************
+	デフォルト
+ ************************/
+body,p,div,td,th,ul,ol,li,dl,dt,dd,address,h1,h2,h3,h4,h5,header,footer,nav,aside,article,section,input {
+	font-size:14px;
+	font-style:normal;
+	font-weight:normal;
+	margin:0px;
+	padding:0px;
+	color:#333333;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Verdana, "メイリオ", Meiryo, "MS UI Gotic", "MS PGothic" ,Osaka, sans-serif;
+	letter-spacing:0.3px;
+	line-height:120%;
+	text-align:left;
+}
+body{
+	text-align:center;
+	-webkit-text-size-adjust: 100%;/* iphone safari 文字サイズ */
+}
+div { text-align:left; }
+ul{ list-style:none; }
+li{ text-align:left; }
+
+a{
+	color:#333;
+	text-decoration:none;
+	overflow:hidden;
+}
+a:hover{
+	text-decoration:underline;
+}
+a:hover img{
+  filter: alpha(opacity=70);
+  -moz-opacity:0.70;
+  opacity:0.70;
+}
+img{border:none;}
+
+
+/************************
+	コンテンツ枠
+ ************************/
+#contents_are{
+	width:100%;
+}
+#contents{
+	width:980px;
+	margin:0 auto;
+}
+
+
+/************************
+	rap枠
+ ************************/
+#rap{
+	width:640px;
+	float:left;
+	padding:0;
+	margin-bottom:20px;
+}
+#rap_top {
+	border-left:5px solid #CCE37F;
+	padding-left:10px;
+	margin-bottom:30px;
+}
+/* 検索結果の表示部分 */
+#rap form.gsc-search-box {
+	display:none;
+}
+.cse .gsc-control-cse, .gsc-control-cse {
+	padding:0!important;
+}
+/*- パンクズ -----------------------------------*/
+#rap_top .pan {
+	color:#777;
+	font-size:12px;
+	margin-bottom:5px;
+	overflow:hidden;
+}
+#rap_top .pan a {
+	color:#777;
+	margin-right:5px;
+}
+#rap_top .pan a:after {
+	border-top: 1px solid #777;
+	border-right: 1px solid #777;
+	content:"";
+	height:5px;
+	width:5px;
+	transform:rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	display:inline-block;
+	margin:0 5px 2px;
+}
+#rap_top .pan .home {
+	width:15px;
+	color:#ccc;
+}
+#rap_top .pan .now {
+	color:#99C700;
+	font-weight:bold;
+}
+
+/*- タグ -----------------------------------*/
+ul.tag {
+	overflow:hidden;
+}
+ul.tag li {
+	background:#eaeaea;
+	font-size:13px;
+	padding:4px 7px;
+	margin-right:7px;
+	margin-bottom:7px;
+	float:left;
+	display:inline-block;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+/*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
+behavior: url(../../../common/script/js/PIE.htc);
+}
+ul.tag li:hover {
+	background:#ccc;
+}
+ul.tag li a {
+	color:#666;
+	display:block;
+}
+ul.tag li a:hover {
+	text-decoration:none;
+}
+/* ぱんくず下のタグ */
+#rap_top ul.tag {
+	background:url(../../../common/img/tag.png) left top no-repeat;
+	padding-left:30px;
+	margin-top:10px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+#rap_top ul.tag {
+	background:url(../../../common/img/tag@2x.png) left top no-repeat;
+	background-size: 20px 14px;
+}
+}
+#rap_top ul.tag li {
+	font-size:11px;
+	padding:2px 4px;
+	margin-right:5px;
+	margin-bottom:5px;
+}
+@media screen and (max-width: 485px) {
+#rap_top ul.tag li {
+	float:none;
+}
+}
+/*- カテゴリ一覧 タイトル -----------------------------------*/
+#rap_top h2.search_name {
+	background:url(../../../common/img/search.png) left top no-repeat;
+	min-height:26px;
+	color:#666;
+	font-size:20px;
+	font-weight:bold;
+	padding-bottom:10px;
+	padding-left:30px;
+	margin-top:10px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), 
+only screen and (min-device-pixel-ratio: 2) {
+#rap_top h2.search_name {
+	background:url(../../../common/img/search.@2x.png) left top no-repeat;
+	background-size: 26px 26px;
+}
+}
+/******************
+	下部導線ボタン
+********************/
+#rap .back{
+	padding:20px 0 40px;
+	text-align:center;
+}
+#rap .back a{
+	background:#F8F8F8 none repeat scroll 0 0;
+	border:1px solid #EEEEEE;
+	color:#666666;
+	display:inline-block;
+	padding:10px 0;
+	text-align:center;
+	width:97%;
+}
+
+/************************
+	ページTOPボタン
+ ************************/
+#page-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 77%;
+}
+#page-top span:before {
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+	content:"";
+	height:3px;
+	width:3px;
+	transform:rotate(315deg);
+	-webkit-transform: rotate(315deg);
+	display:inline-block;
+	margin-right:7px;
+	margin-bottom:1px;
+}
+#page-top span {
+	background: url(../../../common/img/bg.png);
+	text-decoration: none;
+	color: #fff;
+	width: 100px;
+	padding: 16px 0;
+	text-align: center;
+	display: block;
+	border-radius: 5px;
+	cursor: pointer;
+}

@@ -1,0 +1,356 @@
+/************************
+	 header
+ ************************/
+header {
+	background:#99C700;
+	width:100%;
+}
+
+/* ///////////////////////// 
+	１段目
+ ///////////////////////// */
+header #header_top_area {
+	background:#99C700;
+}
+header #header_top {
+	width:980px;
+	margin:0 auto;
+	overflow:hidden;
+}
+header #header_top h1 {
+	font-size:10px;
+	color:#fff;
+}
+
+/* Googleカスタム検索 */
+header #header_top .search-box {
+	width:250px;
+	display:block;
+	float:right;
+	margin-top:5px;
+	margin-left:10px;
+
+	display:none;
+}
+header #header_top .google-search .gsc-input-box {
+	height:20px;
+}
+header #header_top .google-search .gsc-search-box-tools .gsc-search-box .gsc-input {
+	font-size:11px;
+	padding-right:5px;
+}
+header #header_top .google-search .gsib_a { 
+	padding-top:0;
+	vertical-align:top;
+}
+header #header_top .google-search .gsc-search-box-tools {
+	font-size:11px;
+}
+header #header_top .google-search .gsst_a .gscb_a {
+	color:#ccc;
+}
+header #header_top .google-search input.gsc-search-button {
+	height:8px;
+	width:8px;
+	min-width:5px;
+	padding:5px 10px;
+	margin:0;
+}
+
+/* ///////////////////////// 
+	２段目
+ ///////////////////////// */
+header #header_area {
+	background:#F5F9E5;
+	width:100%;
+}
+header #header {
+	width:980px;
+	padding:10px 0;
+	margin:0 auto;
+	overflow:hidden;
+}
+header #header #header_info {
+	max-width:520px;
+	float:left;
+	display:inline-block;
+	overflow:hidden;
+}
+header #header #header_info .logo {
+	float:left;
+	display:block;
+}
+header #header #header_contact {
+	width:420px;
+	float:right;
+	position:relative;
+	display:inline-block;
+}
+header #header #header_contact #header_tel_comment {
+	font-size:12px;
+	font-weight:bold;
+}
+header #header #header_contact #header_tel {
+	font-size:23px;
+	font-weight:bold;
+}
+header #header #header_contact #header_tel span {
+	font-size:15px;
+}
+header #header #header_contact p {
+	font-size:11px;
+}
+header #header #header_contact a#header_mail {
+	border:1px solid #fff;
+	background:#FF9900;
+	color:#fff;
+	font-weight:bold;
+	padding:3px;
+	display:block;
+	position:absolute;
+	top:0;
+	right:0;
+}
+header #header #header_contact a#header_mail:hover {
+	text-decoration:none;
+}
+header #header #header_contact a#header_mail img {
+	width:15px;
+	margin:0 5px;
+}
+
+
+/* ///////////////////////// 
+	３段目　グローバルナビ
+ ///////////////////////// */
+#toggle {
+	display:none;
+}
+nav#gnav {
+	background:#E0EEB2;
+	width:100%;
+	margin-bottom:10px;
+	z-index:10;
+}
+nav#gnav #sub_menu_area {
+	background:#E0EEB2;
+}
+nav#gnav #cate_menu_area {
+	background:#D5E895;
+}
+nav#gnav ul {
+	width:980px;
+	margin:0 auto;
+	line-height:0;
+}
+nav#gnav #gnav_box ul {
+	line-height:0;
+}
+nav#gnav ul li {
+	background:url(../../../common/img/gnav.png) 0 10px no-repeat;
+	color:#3E6600;
+	font-size:10px;
+	font-weight:bold;
+	display:inline-block;
+}
+nav#gnav ul li a {
+	color:#3E6600;
+	display:block;
+	padding:10px 5px 10px 20px;
+}
+nav#gnav ul li:hover, nav#gnav ul li a:hover {
+	background-color:#BBDC4F;
+	text-decoration:none;
+}
+
+/* グローバルナビ　ページ上部固定 */
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* タブレット・スマホ用　ページ上部検索窓 */
+nav#gnav .google-search {
+	display:none;
+}
+
+
+/* ここからタブレット対応 */
+@media screen and (max-width: 769px) {
+/* ///////////////////////// 
+	１段目
+ ///////////////////////// */
+header #header_top {
+	width:95%;
+	margin:0 auto;
+}
+header #header_top .search-box {
+	width:300px;
+	float:right;
+	margin-left:10px;
+/*	display:block;*/
+}
+header #header_top .search-box .gsc-control-cse {
+	background:none;
+	border:none;
+}
+
+/* ///////////////////////// 
+	２段目
+ ///////////////////////// */
+header #header {
+	width:95%;
+	margin:0 auto;
+}
+header #header #header_info {
+}
+header #header #header_contact {
+	width:255px;
+	padding-bottom:30px;
+}
+header #header #header_contact a#header_mail {
+	top:auto;
+	right:auto;
+	bottom:0;
+	left:0;
+}
+/* ///////////////////////// 
+	３段目　グローバルナビ
+ ///////////////////////// */
+#toggle{
+  display: block;
+  position: relative;
+  width: 100%;
+  background: #E0EEB2;
+}
+#toggle a{
+  display: block;
+  position: relative;
+  padding: 12px 0 10px;
+  border-bottom: 1px solid #99C700;
+  color: #3E6600;
+  font-weight:bold;
+  text-align: center;
+  text-decoration: none;
+  line-height:100%;
+}
+#toggle:before{
+	display: block;
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	background: #3E6600;
+}
+#toggle a:before, #toggle a:after{
+	display: block;
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	width: 20px;
+	height: 4px;
+	background: #E0EEB2;
+}
+#toggle a:before{
+	margin-top: -6px;
+}
+#toggle a:after{
+	margin-top: 2px;
+}
+
+nav#gnav {
+	width:100%;
+}
+nav#gnav #gnav_box {
+	width:100%;
+	overflow:hidden;
+	overflow-y:scroll;
+}
+nav#gnav ul {
+	width:100%;
+}
+nav#gnav ul li {
+	background:none;
+	font-size:13px;
+	position:relative;
+}
+nav#gnav ul li a {
+	padding:10px;
+	padding-left:10px;
+}
+nav#gnav ul li span.touch-button {
+	position:absolute;
+	display:block;
+	top:10px;
+	right:10px;
+	cursor:pointer;
+}
+
+
+
+nav#gnav ul li {
+	display:block;
+}
+nav#gnav ul li a {
+	display:inline-block;
+}
+
+/* タブレット・スマホ用　ページ上部検索窓 */
+nav#gnav .google-search {
+	display:block;
+}
+
+}
+
+/* ここからスマートフォン対応 */
+@media screen and (max-width: 485px) {
+/* ///////////////////////// 
+	１段目
+ ///////////////////////// */
+header #header_top_area {
+	display:none;
+}
+header #header_top .search-box {
+	width:100%;
+	float:none;
+	margin-left:0;
+}
+/* ///////////////////////// 
+	２段目
+ ///////////////////////// */
+header #header_area {
+	border-top:3px solid #99C700;
+}
+header #header #header_info {
+	width:100%;
+	float:none;
+	display:block;
+}
+header #header #header_info .logo {
+	float:none;
+	display:block;
+}
+header #header #header_contact {
+	width:100%;
+	padding-bottom:0;
+	float:none;
+	position:relative;
+	display:block;
+}
+header #header #header_contact a#header_mail {
+	position:relative;
+	margin:10px 0;
+	padding:5px;
+	text-align:center;
+}
+/* ///////////////////////// 
+	３段目
+ ///////////////////////// */
+
+}

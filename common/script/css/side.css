@@ -1,0 +1,165 @@
+/************************
+ local navi
+ ************************/
+
+#side{
+	width:300px;
+	float:right;
+}
+
+/**/
+#side .bn {
+	text-align:center;
+	margin-bottom:10px;
+}
+
+
+/**/
+#side .navbox {
+	margin-bottom:20px;
+}
+#side .navbox h2 {
+	background:#99C700;
+	color:#fff;
+	font-size:14px;
+	font-weight:bold;
+	padding:3px 5px;
+	margin-bottom:10px;
+}
+
+/*- 新着情報 -----------------------------------*/
+#side .entry h2 {
+	margin-bottom:0;
+}
+#side .entry .box {
+	border-bottom:1px solid #e0e0e0;
+	padding:10px 0;
+	overflow:hidden;
+}
+#side .entry .box:hover {
+	background:#fafafa;
+}
+#side .entry .box .photo {
+	width:80px;
+	float:left;
+	margin-right:5px;
+	display:block;
+}
+#side .entry .box .photo img {
+	width:100%;
+}
+#side .entry .box h3 {
+	font-weight:bold;
+}
+#side .entry .box h3 .date {
+	color:#999;
+	font-size:10px;
+	font-weight:normal;
+}
+#side .entry .box p {
+	font-size:13px;
+	margin-top:10px;
+}
+#side .entry .box p a {
+	color:#666;
+}
+#side .entry .box p.tag {
+	color:#999;
+	font-size:11px;
+	margin-top:10px;
+}
+#side .entry .box p.tag a {
+	color:#999;
+}
+
+/*- ホットワード -----------------------------------*/
+#side .hot_word .more {
+	text-align:right;
+	margin-top:5px;
+}
+#side .hot_word .more a {
+	color:#99C700;
+	font-size:13px;
+	font-weight:bold;
+}
+#side .hot_word .more a:before {
+	border-top: 1px solid #99C700;
+	border-right: 1px solid #99C700;
+	content:"";
+	height:3px;
+	width:3px;
+	transform:rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	display:inline-block;
+	margin-right:5px;
+	margin-bottom:3px;
+}
+
+/*- カテゴリ -----------------------------------*/
+#side .cate ul li {
+	font-weight:bold;
+	position:relative;
+}
+#side .cate ul li a {
+	margin-left:13px;
+}
+#side .cate ul li .btn_pm {
+	background:url(../../../common/img/btn_side_menu.png) no-repeat top right;
+	width:11px;
+	height:11px;
+	position:absolute;
+	cursor:pointer;
+	left:0;
+	top:0;
+}
+#side .cate ul li .btn_pm:hover {
+	background-position:bottom right;
+}
+#side .cate ul li .btn_pm.off {
+	background-position:top left;
+}
+#side .cate ul li .btn_pm.off:hover {
+	background-position:bottom left;
+}
+/* 子カテゴリ */
+#side .cate ul ul {
+	margin:5px 0 5px 10px;
+}
+#side .cate ul ul li:before {
+	border-top: 1px solid #333;
+	border-right: 1px solid #333;
+	content:"";
+	height:3px;
+	width:3px;
+	transform:rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	display:inline-block;
+	margin-right:7px;
+	margin-bottom:3px;
+}
+#side .cate ul ul li {
+	font-size:13px;
+	font-weight:normal;
+}
+#side .cate ul ul li a {
+	margin-left:0;
+}
+
+
+/*- フリースペース -----------------------------------*/
+#side .free_space {
+	line-height:200%;
+}
+
+
+
+@media screen and (max-width: 769px) {
+#side{
+	width:100%;
+	float:none;
+}
+/* サイト内検索 非表示 */
+#side .search-box {
+	display:none;
+}
+}
