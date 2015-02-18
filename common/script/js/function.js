@@ -1,6 +1,8 @@
 //-----------------------------------------------------------------
-//           グローバルナビ　上部固定
+//           グローバルナビ
 //-----------------------------------------------------------------
+
+// 上部固定
 $(function() {
     var nav = $('#gnav');
     //navの位置    
@@ -17,24 +19,24 @@ $(function() {
     });
 });
 
-
+//折りたたみ
 $(function(){
   $("#toggle").click(function(){
     $("#gnav_box").slideToggle();
     return false;
   });
-  $(window).resize(function(){
-    var win = $(window).width();
-    var p = 769;
-    if(win > p){
-      $("#gnav_box").show();
-    } else {
-      $("#gnav_box").hide();
-    }
-  });
 });
 
 
+//$(function(){
+//  $(window).resize(function(){
+//    var win = $(window).width();
+//    var p = 769;
+//    if(win > p){
+//      $("#gnav_box").show();
+//    }
+//  });
+//});
 
 //開いた画面の高さを取得
 var WindowHeight = $(window).height(); //WindowHeightは変数で任意の名前

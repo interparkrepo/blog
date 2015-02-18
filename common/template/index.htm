@@ -13,7 +13,6 @@
 
 <link type="text/css" rel="stylesheet" href="../../common/script/css/style.css">
 
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="../../common/script/js/jquery-ui.js"></script>
 <script src="../../common/script/js/js.js"></script>
@@ -24,23 +23,31 @@
 $(function() {
 	$(".fancybox").fancybox({
 		'hideOnContentClick'	:true,
-		'showCloseButton'		:false,
-		'autoScale'				:false
+		'showCloseButton'	:false,
+		'autoScale'		:false
 	});
 });
 </script>
-</head>
-
-<body>
-
-<header>
-	<div id="header_top_area"><div id="header_top">
-
-<!-- ここからサイト内検索用コード貼付け -->
-<div class="search-box">
+<!-- portfolio.pack -->
+<!-- script src="../../common/script/js/portfolio.pack.min.js"></script -->
+<script>
+$(function() {
+	if (window.matchMedia( '(min-width: 484px)' ).matches) {
+	} else {
+		var p = $("#rap_top ul.tag").portfolio({
+			logger: true,
+		});
+		p.init();
+	};
+}); 
+</script>
+<!-- Googleカスタム検索 -->
 <script>
   (function() {
+//  ↓検索エンジンIDを書き換える
     var cx = '001295886434854555549:7plppjukchw';
+//  var cx = '検索エンジンID';
+
     var gcse = document.createElement('script');
     gcse.type = 'text/javascript';
     gcse.async = true;
@@ -50,9 +57,16 @@ $(function() {
     s.parentNode.insertBefore(gcse, s);
   })();
 </script>
-<gcse:searchbox></gcse:searchbox>
-</div>
-<!-- ここまでサイト内検索用コード貼付け -->
+<!-- Googleカスタム検索 -->
+</head>
+
+<body>
+
+<header>
+	<div id="header_top_area"><div id="header_top">
+		<div class="search-box">
+			<div class="google-search search-box_form" id="gcse"><div class="gcse-searchbox-only" data-resultsUrl="./search.htm"></div></div>
+		</div>
 
 		<h1>GTスポーツ系の中古車を中心としていますが、どんな車種でもお取り扱いしております。（h1 コピー）GTスポーツ系の中古車を中心としていますが、どんな車種でもお取り扱いしております。（h1 コピー）</h1>
 	</div></div><!-- /#header_area -->
@@ -62,30 +76,44 @@ $(function() {
 			<a href="../../index.htm" class="logo"><img src="../../common/img/sample_logo.png" alt="SampleShop"></a>
 		</div><!-- /#header_info -->
 		<div id="header_contact">
+			<p id="header_tel_comment">クルマのこと、お気軽にご相談ください。</p>
 			<div id="header_tel"><span>Tel：</span>011-123-4567</div>
 			<p>営業時間：9:00～19：00<br>
 			定休日：不定休（走行会・レース以外の土・日も営業してます。）</p>
-			<a href="" id="header_mail"><img src="../../common/img/header_mail.png" width="15" height="10">お問い合わせはこちら</a>
-		</div>
+			<a href="" id="header_mail"><img src="../../common/img/header_mail.png" width="15" height="10">お問い合わせはこちら</a>		</div>
 		<!-- /#header_info -->
 	</div></div><!-- /#header_area -->
 </header>	
 	
-
-<nav id="gnav"><div id="toggle"><a href="#">メニューを開く</a></div><ul>
-	<li><a href="">トヨタ [TOYOTA]</a></li>
-	<li><a href="">日産 [NISSAN]</a></li>
-	<li><a href="">ホンダ [HONDA]</a></li>
-	<li><a href="">三菱 [MITSUBISHI]</a></li>
-	<li><a href="">トヨタ [TOYOTA]</a></li>
-	<li><a href="">日産 [NISSAN]</a></li>
-	<li><a href="">ホンダ [HONDA]</a></li>
-	<li><a href="">三菱 [MITSUBISHI]</a></li>
-	<li><a href="">トヨタ [TOYOTA]</a></li>
-	<li><a href="">日産 [NISSAN]</a></li>
-	<li><a href="">ホンダ [HONDA]</a></li>
-	<li><a href="">三菱 [MITSUBISHI]</a></li>
-</ul></nav>
+<nav id="gnav">
+	<div class="google-search search-box_form" id="gcse"><div class="gcse-searchbox-only" data-resultsUrl="../../common/template/search.htm"></div></div>
+	<div id="toggle"><a href="#">メニューを開く</a></div>
+	<div id="gnav_box">
+		<div id="sub_menu_area">
+			<ul id="sub_menu">
+				<li><a href="">会社案内</a></li>
+				<li><a href="">サイトマップ</a></li>
+				<li><a href="">プライバシーポリシー</a></li>
+			</ul>
+		</div>
+		<div id="cate_menu_area">
+			<ul id="cate_menu">
+				<li><a href="">トヨタ [TOYOTA]</a></li>
+				<li><a href="">日産 [NISSAN]</a></li>
+				<li><a href="">ホンダ [HONDA]</a></li>
+				<li><a href="">三菱 [MITSUBISHI]</a></li>
+				<li><a href="">トヨタ [TOYOTA]</a></li>
+				<li><a href="">日産 [NISSAN]</a></li>
+				<li><a href="">ホンダ [HONDA]</a></li>
+				<li><a href="">三菱 [MITSUBISHI]</a></li>
+				<li><a href="">トヨタ [TOYOTA]</a></li>
+				<li><a href="">日産 [NISSAN]</a></li>
+				<li><a href="">ホンダ [HONDA]</a></li>
+				<li><a href="">三菱 [MITSUBISHI]</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
 
 
 <div id="contents_area"><div id="contents">
@@ -98,14 +126,16 @@ $(function() {
 </div>
 <!-- ここまでサイト内検索用コード貼付け 検索結果表示 -->
 
-<article class="item list">
+<article class="item list off">
+	<a href="" class="photo"><img src="../../common/img/sample.jpg" alt=""></a>
 	<h1><a href="">JZZ30ソアラ2500ツインターボ　車検上げ完了　本日納車。</a></h1>
 	<div class="date">
-		<span class="record">2015年01月22日 12:10</span>
-		<span class="update">更新日：2015年01月30日 15:20</span>
+		<span class="record">2015年01月22日</span>
+		<span class="update">更新日：2015年01月30日</span>
 	</div>
 	<p class="short_text"><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</a></p>
-	
+	<p class="tag"><a href="">2500ツインターボ</a>, <a href="">サンルーフ</a>, <a href="">ナビ付き</a>, <a href="">VVT-ｉターボ</a>,</p>
+
 	<div>O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</div>
 	
 	<a href="../../common/img/sample.jpg" class="fancybox"><img src="../../common/img/sample.jpg" alt=""></a>
@@ -114,34 +144,17 @@ $(function() {
 	<div>こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。</div>
 
 </article><!-- /.item -->
-
-<article class="item list">
-	<h1><a href="">JZZ30ソアラ2500ツインターボ　車検上げ完了　本日納車。</a></h1>
-	<div class="date">
-		<span class="record">2015年01月22日 12:10</span>
-		<span class="update">更新日：2015年01月30日 15:20</span>
-	</div>
-	<p class="short_text"><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</a></p>
-		
-	<div>O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</div>
-	
-	<a href="../../common/img/sample.jpg" class="fancybox"><img src="../../common/img/sample.jpg" alt=""></a>
-	
-	<h2>見出し（大）が入ります。</h2>
-	<div>こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。</div>
-
-</article><!-- /.item -->
-
 
 <article class="item list off">
 	<a href="" class="photo"><img src="../../common/img/sample.jpg" alt=""></a>
 	<h1><a href="">JZZ30ソアラ2500ツインターボ　車検上げ完了　本日納車。</a></h1>
 	<div class="date">
-		<span class="record">2015年01月22日 12:10</span>
-		<span class="update">更新日：2015年01月30日 15:20</span>
+		<span class="record">2015年01月22日</span>
+		<span class="update">更新日：2015年01月30日</span>
 	</div>
 	<p class="short_text"><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</a></p>
-	
+	<p class="tag"><a href="">2500ツインターボ</a>, <a href="">サンルーフ</a>, <a href="">ナビ付き</a>, <a href="">VVT-ｉターボ</a>,</p>
+
 	<div>O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</div>
 	
 	<a href="../../common/img/sample.jpg" class="fancybox"><img src="../../common/img/sample.jpg" alt=""></a>
@@ -150,17 +163,17 @@ $(function() {
 	<div>こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。</div>
 
 </article><!-- /.item -->
-
 
 <article class="item list off">
 	<a href="" class="photo"><img src="../../common/img/sample.jpg" alt=""></a>
 	<h1><a href="">JZZ30ソアラ2500ツインターボ　車検上げ完了　本日納車。</a></h1>
 	<div class="date">
-		<span class="record">2015年01月22日 12:10</span>
-		<span class="update">更新日：2015年01月30日 15:20</span>
+		<span class="record">2015年01月22日</span>
+		<span class="update">更新日：2015年01月30日</span>
 	</div>
 	<p class="short_text"><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</a></p>
-	
+	<p class="tag"><a href="">2500ツインターボ</a>, <a href="">サンルーフ</a>, <a href="">ナビ付き</a>, <a href="">VVT-ｉターボ</a>,</p>
+
 	<div>O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</div>
 	
 	<a href="../../common/img/sample.jpg" class="fancybox"><img src="../../common/img/sample.jpg" alt=""></a>
@@ -169,30 +182,57 @@ $(function() {
 	<div>こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。</div>
 
 </article><!-- /.item -->
+
+<article class="item list off">
+	<a href="" class="photo"><img src="../../common/img/sample.jpg" alt=""></a>
+	<h1><a href="">JZZ30ソアラ2500ツインターボ　車検上げ完了　本日納車。</a></h1>
+	<div class="date">
+		<span class="record">2015年01月22日</span>
+		<span class="update">更新日：2015年01月30日</span>
+	</div>
+	<p class="short_text"><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</a></p>
+	<p class="tag"><a href="">2500ツインターボ</a>, <a href="">サンルーフ</a>, <a href="">ナビ付き</a>, <a href="">VVT-ｉターボ</a>,</p>
+
+	<div>O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</div>
+	
+	<a href="../../common/img/sample.jpg" class="fancybox"><img src="../../common/img/sample.jpg" alt=""></a>
+	
+	<h2>見出し（大）が入ります。</h2>
+	<div>こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。こちらに文章が入ります。</div>
+
+</article><!-- /.item -->
+
 
 </div><!-- /#rap -->
 
 
 <div id="side">
+
+
+	<div class="navbox search-box">
+		<h2 class="nav_title">サイト内検索</h2>
+		<div class="google-search" id="gcse"><div class="gcse-searchbox-only" data-resultsUrl="./search.htm"></div></div>
+	</div>
+
 	<div class="navbox entry">
 		<h2 class="nav_title">新着情報</h2>
 		<div class="box">
 			<a href="" class="photo"><img src="../../common/img/sample.jpg" alt=""></a>
 			<h3><a href="">JZZ30ソアラ2500 ツインターボ 車検上げ完了 本日納車。</a><span class="date">(2015/01/26)</span></h3>
-			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終...</a></p>
+			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わりました。</a></p>
 		</div>
 		<div class="box">
 			<a href="" class="photo"><img src="../../common/img/sample.jpg" alt=""></a>
 			<h3><a href="">JZZ30ソアラ2500 ツインターボ 車検上げ完了 本日納車。（日付ない場合）</a></h3>
-			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終...</a></p>
+			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わりました。</a></p>
 		</div>
 		<div class="box">
 			<h3><a href="">JZZ30ソアラ2500 ツインターボ 車検上げ完了 本日納車。（写真ない場合）</a><span class="date">(2015/01/26)</span></h3>
-			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終...</a></p>
+			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わりました。</a></p>
 		</div>
 		<div class="box">
 			<h3><a href="">JZZ30ソアラ2500 ツインターボ 車検上げ完了 本日納車。（日付・写真ない場合）</a></h3>
-			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終...</a></p>
+			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わりました。</a></p>
 		</div>
 	</div><!-- /.navbox -->
 	

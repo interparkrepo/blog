@@ -63,13 +63,13 @@ img{border:none;}
 	padding-left:10px;
 	margin-bottom:30px;
 }
-/* 検索結果の表示部分 */
+/* 検索結果の表示部分 
 #rap form.gsc-search-box {
 	display:none;
 }
 .cse .gsc-control-cse, .gsc-control-cse {
 	padding:0!important;
-}
+}*/
 /*- パンクズ -----------------------------------*/
 #rap_top .pan {
 	color:#777;

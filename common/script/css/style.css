@@ -77,7 +77,7 @@
 /*IE 7 AND 8 DO NOT SUPPORT BORDER RADIUS*/
 behavior: url(../../../script/js/PIE.htc);
 }
-#rap .item h3 {
+#rap article.item h3 {
 	color:#666;
 	font-size:16px;
 	font-weight:bold;
@@ -85,14 +85,14 @@ behavior: url(../../../script/js/PIE.htc);
 	margin-bottom:10px;
 }
 /* 見出し（小） */
-#rap .item h4 {
+#rap article.item h4 {
 	color:#99C700;
 	font-size:14px;
 	font-weight:bold;
 	margin-top:20px;
 	margin-bottom:10px;
 }
-#rap .item h4:before {
+#rap article.item h4:before {
 	content:"-";
 	color:#99C700;
 	font-size:16px;
@@ -100,15 +100,13 @@ behavior: url(../../../script/js/PIE.htc);
 	margin-right:10px;
 }
 /*リスト*/
-#rap .item ol {
+#rap article.item ol {
 	list-style:decimal outside none;
 	margin-left:25px;
 }
-#rap .item ul {
+#rap article.item ul {
 	list-style:disc outside none;
 	margin-left:20px;
-}
-#rap .item {
 }
 
 /*- 関連記事 -----------------------------------*/
