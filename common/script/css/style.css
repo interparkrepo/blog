@@ -99,7 +99,14 @@ behavior: url(../../../script/js/PIE.htc);
 	font-weight:bold;
 	margin-right:10px;
 }
-#rap .item {
+/*リスト*/
+#rap .item ol {
+	list-style:decimal outside none;
+	margin-left:25px;
+}
+#rap .item ul {
+	list-style:disc outside none;
+	margin-left:20px;
 }
 #rap .item {
 }
@@ -200,9 +207,17 @@ behavior: url(../../../script/js/PIE.htc);
 /* ここまでスマートフォン対応 */
 
 
+
+
+
+
 /******************
 	記事スタイル　一覧ページ
 ********************/
+#rap .comment.btm {
+	margin-top:30px;
+}
+
 #rap .item.list {
 	border-bottom:3px solid #ddd;
 	padding-top:30px;
@@ -242,6 +257,14 @@ behavior: url(../../../script/js/PIE.htc);
 #rap .item.list.off .date {
 	display:block;
 }
+#rap .item.list.off .tag {
+	color:#999;
+	font-size:12px;
+	margin-top:10px;
+}
+#rap .item.list.off .tag a {
+	color:#999;
+}
 #rap .item.list.off img,
 #rap .item.list.off h2,
 #rap .item.list.off h3,
@@ -249,6 +272,49 @@ behavior: url(../../../script/js/PIE.htc);
 	display:none;
 }
 
+
+/* ここからスマートフォン対応 */
+@media screen and (max-width: 485px) {
+#rap .item.list {
+	overflow:hidden;
+}
+#rap .item.list:hover {
+	background:#fafafa;
+}
+#rap .item.list .photo {
+	width:80px!important;
+	float:left;
+	margin-right:5px;
+	display:block;
+}
+#rap .item.list .photo img {
+	width:100%;
+	margin:0;
+	display:block;
+}
+#rap .item.list h1 {
+	font-size:14px!important;
+	display:block;
+}
+#rap .item.list .short_text,
+#rap .item.list .date {
+	display:block;
+}
+#rap .item.list.off .tag {
+	color:#999;
+	font-size:12px;
+	margin-top:10px;
+}
+#rap .item.list.off .tag a {
+	color:#999;
+}
+#rap .item.list img,
+#rap .item.list h2,
+#rap .item.list h3,
+#rap .item.list div {
+	display:none;
+}}
+/* ここまでスマートフォン対応 */
 
 
 
