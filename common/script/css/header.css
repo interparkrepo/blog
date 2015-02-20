@@ -78,7 +78,7 @@ header #header #header_info {
 }
 header #header #header_info .logo {
 	float:left;
-	display:block;
+	display:inline-block;
 }
 header #header #header_contact {
 	width:420px;
@@ -263,6 +263,15 @@ header #header #header_contact a#header_mail {
 #toggle a:after{
 	margin-top: 2px;
 }
+#toggle .active{
+	display:none;
+}
+#toggle.active .passive{
+	display:none;
+}
+#toggle.active .active{
+	display:inline;
+}
 
 nav#gnav {
 	width:100%;
@@ -335,7 +344,6 @@ header #header #header_info {
 }
 header #header #header_info .logo {
 	float:none;
-	display:block;
 }
 header #header #header_contact {
 	width:100%;
@@ -350,8 +358,4 @@ header #header #header_contact a#header_mail {
 	padding:5px;
 	text-align:center;
 }
-/* ///////////////////////// 
-	‚R’i–Ú
- ///////////////////////// */
-
 }

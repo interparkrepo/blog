@@ -87,7 +87,7 @@ $(function() {
 	
 <nav id="gnav">
 	<div class="google-search search-box_form" id="gcse"><div class="gcse-searchbox-only" data-resultsUrl="../../common/template/search.htm"></div></div>
-	<div id="toggle"><a href="#">メニューを開く</a></div>
+	<div id="toggle"><a href="#">メニューを<span class="passive">開く</span><span class="active">閉じる</span></a></div>
 	<div id="gnav_box">
 		<div id="sub_menu_area">
 			<ul id="sub_menu">
@@ -120,9 +120,10 @@ $(function() {
 
 <div id="rap">
 
+<div id="toggle_rap_top"><a href="#">関連ワードを<span class="passive">開く</span><span class="active">閉じる</span></a></div>
 <div id="rap_top">
-	<aside class="pan"><a href="../"><img src="../../common/img/pan_home.png" alt="HOME" class="home" width="15" height="14"></a><a href="">トヨタ [TOYOTA]</a><a href="../" class="now">JZZ30 ソアラ</a></aside>
-	<aside class="pan"><a href="../"><img src="../../common/img/pan_home.png" alt="HOME" class="home" width="15" height="14"></a><a href="">親カテゴリ名親カテゴリ名</a><a href="../" class="now">子カテゴリ名子カテゴリ名</a></aside>
+	<aside class="pan"><a href="./" class="home"><img src="../../common/img/pan_home.png" alt="HOME" width="15" height="14"></a><a href="">トヨタ [TOYOTA]</a><a href="../" class="now">JZZ30 ソアラ</a></aside>
+	<aside class="pan"><a href="./" class="home"><img src="../../common/img/pan_home.png" alt="HOME" width="15" height="14"></a><a href="">親カテゴリ名親カテゴリ名</a><a href="../" class="now">子カテゴリ名子カテゴリ名</a></aside>
 	<ul class="tag">
 		<li><a href="">2500ツインターボ</a></li>
 		<li><a href="">サンルーフ</a></li>
@@ -300,46 +301,6 @@ $(function() {
 		<div class="google-search" id="gcse"><div class="gcse-searchbox-only" data-resultsUrl="./search.htm"></div></div>
 	</div>
 
-	<div class="navbox entry">
-		<h2 class="nav_title">新着情報</h2>
-		<div class="box">
-			<a href="" class="photo"><img src="../../common/img/sample.jpg" alt=""></a>
-			<h3><a href="">JZZ30ソアラ2500 ツインターボ 車検上げ完了 本日納車。</a><span class="date">(2015/01/26)</span></h3>
-			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わりました。</a></p>
-		</div>
-		<div class="box">
-			<a href="" class="photo"><img src="../../common/img/sample.jpg" alt=""></a>
-			<h3><a href="">JZZ30ソアラ2500 ツインターボ 車検上げ完了 本日納車。（日付ない場合）</a></h3>
-			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わりました。</a></p>
-		</div>
-		<div class="box">
-			<h3><a href="">JZZ30ソアラ2500 ツインターボ 車検上げ完了 本日納車。（写真ない場合）</a><span class="date">(2015/01/26)</span></h3>
-			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わりました。</a></p>
-		</div>
-		<div class="box">
-			<h3><a href="">JZZ30ソアラ2500 ツインターボ 車検上げ完了 本日納車。（日付・写真ない場合）</a></h3>
-			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わりました。</a></p>
-		</div>
-	</div><!-- /.navbox -->
-	
-	
-	<div class="navbox hot_word">
-		<h2 class="nav_title">ホットワード</h2>
-		<ul class="tag">
-			<li><a href="">2500ツインターボ</a></li>
-			<li><a href="">サンルーフ</a></li>
-			<li><a href="">ナビ付き</a></li>
-			<li><a href="">VVT-ｉターボ</a></li>
-			<li><a href="">フルエアロ</a></li>
-			<li><a href="">純正５速</a></li>
-			<li><a href="">無修復</a></li>
-			<li><a href="">車高調</a></li>
-			<li><a href="">純正ブラック</a></li>
-		</ul>
-		<div class="more"><a href="">ホットワードをもっと見る</a></div>
-	</div><!-- /.navbox -->
-	
-	
 	<div class="navbox cate">
 		<h2 class="nav_title">カテゴリ</h2>
 		<ul>
@@ -361,6 +322,46 @@ $(function() {
 			</li>
 			<li><a href="">トヨタ [TOYOTA]</a></li>
 		</ul>
+	</div><!-- /.navbox -->
+	
+	
+	<div class="navbox hot_word">
+		<h2 class="nav_title">ホットワード</h2>
+		<ul class="tag">
+			<li><a href="">2500ツインターボ</a></li>
+			<li><a href="">サンルーフ</a></li>
+			<li><a href="">ナビ付き</a></li>
+			<li><a href="">VVT-ｉターボ</a></li>
+			<li><a href="">フルエアロ</a></li>
+			<li><a href="">純正５速</a></li>
+			<li><a href="">無修復</a></li>
+			<li><a href="">車高調</a></li>
+			<li><a href="">純正ブラック</a></li>
+		</ul>
+		<div class="more"><a href="">ホットワードをもっと見る</a></div>
+	</div><!-- /.navbox -->
+	
+	
+	<div class="navbox entry">
+		<h2 class="nav_title">新着情報</h2>
+		<div class="box">
+			<a href="" class="photo"><img src="../../common/img/sample.jpg" alt=""></a>
+			<h3><a href="">JZZ30ソアラ2500 ツインターボ 車検上げ完了 本日納車。</a><span class="date">(2015/01/26)</span></h3>
+			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わりました。</a></p>
+		</div>
+		<div class="box">
+			<a href="" class="photo"><img src="../../common/img/sample.jpg" alt=""></a>
+			<h3><a href="">JZZ30ソアラ2500 ツインターボ 車検上げ完了 本日納車。（日付ない場合）</a></h3>
+			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わりました。</a></p>
+		</div>
+		<div class="box">
+			<h3><a href="">JZZ30ソアラ2500 ツインターボ 車検上げ完了 本日納車。（写真ない場合）</a><span class="date">(2015/01/26)</span></h3>
+			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わりました。</a></p>
+		</div>
+		<div class="box">
+			<h3><a href="">JZZ30ソアラ2500 ツインターボ 車検上げ完了 本日納車。（日付・写真ない場合）</a></h3>
+			<p><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わりました。</a></p>
+		</div>
 	</div><!-- /.navbox -->
 	
 	

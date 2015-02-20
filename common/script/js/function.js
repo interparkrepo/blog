@@ -22,6 +22,7 @@ $(function() {
 //折りたたみ
 $(function(){
   $("#toggle").click(function(){
+    $(this).toggleClass("active");
     $("#gnav_box").slideToggle();
     return false;
   });
@@ -43,6 +44,20 @@ var WindowHeight = $(window).height(); //WindowHeightは変数で任意の名前
 $(function(){
 	$('#gnav_box').css('max-height',WindowHeight+'px');
 });
+
+//-----------------------------------------------------------------
+//           パンくず・関連ワード
+//-----------------------------------------------------------------
+
+//折りたたみ
+$(function(){
+  $("#toggle_rap_top").click(function(){
+    $(this).toggleClass("active");
+	$("#rap_top").slideToggle();
+    return false;
+  });
+});
+
 
 //-----------------------------------------------------------------
 //           ページトップへ戻る

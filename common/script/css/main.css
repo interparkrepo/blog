@@ -58,10 +58,71 @@ img{border:none;}
 	padding:0;
 	margin-bottom:20px;
 }
+
+#toggle_rap_top {
+	display:none;
+}
 #rap_top {
 	border-left:5px solid #CCE37F;
 	padding-left:10px;
 	margin-bottom:30px;
+}
+/* ここからスマートフォン対応 */
+@media screen and (max-width: 485px) {
+#toggle_rap_top{
+  background: #CCE37F;
+  width: 100%;
+  margin-bottom:10px;
+  display: block;
+  position: relative;
+}
+#toggle_rap_top a{
+  display: block;
+  position: relative;
+  padding: 5px 0;
+  color: #3E6600;
+  font-size:13px;
+  font-weight:bold;
+  text-align: center;
+  text-decoration: none;
+  line-height:100%;
+}
+#toggle_rap_top a:before {
+	border-top: 1px solid #3E6600;
+	border-right: 1px solid #3E6600;
+	content:"";
+	height:6px;
+	width:6px;
+	transform:rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	display:inline-block;
+	position:absolute;
+	top:5px;
+	left:10px;
+}
+#toggle_rap_top.active a:before {
+	transform:rotate(315deg);
+	-webkit-transform: rotate(315deg);
+	top:10px;
+}
+#toggle_rap_top .active{
+	display:none;
+}
+#toggle_rap_top.active .passive{
+	display:none;
+}
+#toggle_rap_top.active .active{
+	display:inline;
+}
+#rap_top {
+	background:#fff;
+	border-bottom:1px solid #CCE37F;
+	border-left:none;
+	display:none;
+	width:initial;
+	padding:0 10px 10px;
+	margin-bottom:10px;
+}
 }
 /* 検索結果の表示部分 
 #rap form.gsc-search-box {
@@ -74,6 +135,9 @@ img{border:none;}
 #rap_top .pan {
 	color:#777;
 	font-size:12px;
+	position:relative;
+	padding-top:2px;
+	padding-left:20px;
 	margin-bottom:5px;
 	overflow:hidden;
 }
@@ -81,7 +145,7 @@ img{border:none;}
 	color:#777;
 	margin-right:5px;
 }
-#rap_top .pan a:after {
+#rap_top .pan a:before {
 	border-top: 1px solid #777;
 	border-right: 1px solid #777;
 	content:"";
@@ -90,9 +154,17 @@ img{border:none;}
 	transform:rotate(45deg);
 	-webkit-transform: rotate(45deg);
 	display:inline-block;
-	margin:0 5px 2px;
+	margin:0 5px 2px 0;
 }
 #rap_top .pan .home {
+	position:absolute;
+	top:0;
+	left:0;
+}
+#rap_top .pan .home:before {
+	display:none;
+}
+#rap_top .pan .home img {
 	width:15px;
 	color:#ccc;
 }

@@ -13,7 +13,7 @@
 	記事スタイル
 ********************/
 #rap .item {
-	margin-bottom:40px;
+	margin-bottom:10px;
 }
 #rap .item h1 {
 	font-size:20px;
@@ -113,7 +113,7 @@ behavior: url(../../../script/js/PIE.htc);
 #rap aside.item {
 }
 #rap aside.item .boxin {
-	margin-bottom:40px;
+	margin-bottom:10px;
 	overflow:hidden;
 }
 #rap .item .related_item .box {
