@@ -1,9 +1,8 @@
 //-----------------------------------------------------------------
 //           グローバルナビ、パンくず・関連ワード
 //-----------------------------------------------------------------
-
-// リサイズ時に表示・非表示を初期化 ----------
 $(function(){
+	// リサイズ時に初期化
 	var timer = false;
 	$(window).resize(function() {
 		if (timer !== false) {
@@ -11,11 +10,10 @@ $(function(){
 		}
 		timer = setTimeout(function() {
 			console.log('resized');
-			var w = $(window).width();
-			if (w > 769) { 
+			if (window.matchMedia('screen and (min-width:770px)').matches) { 
 				// PC
 				$("#gnav_box").show();
-			} else if (w < 485) { 
+			} else if (window.matchMedia('screen and (max-width: 485px)').matches) {
 				// スマホ
 				$("#rap_top").hide();
 				$("#toggle_rap_top").removeClass("active");
@@ -29,7 +27,11 @@ $(function(){
 	});
 });
 
-// グローバルナビ 上部固定 ----------
+
+//-----------------------------------------------------------------
+//           グローバルナビ
+//-----------------------------------------------------------------
+// 上部固定
 $(function() {
     var nav = $('#gnav');
     //navの位置    
@@ -46,10 +48,9 @@ $(function() {
     });
 });
 
-// グローバルナビ 折りたたみ ----------
+//折りたたみ
 $(function(){
-	var w = $(window).width();
-	if (w > 769) { 
+	if (window.matchMedia('screen and (min-width:770px)').matches) { 
 	}else{
 		$("#toggle").click(function(){
 			$(this).toggleClass("active");
@@ -64,12 +65,11 @@ $(function(){
 	});
 });
 
-// プルダウンメニュー ----------
+// プルダウンメニュー
 $(function(){
 	// ２階層以下は非表示にしておく
 	$("#sub_menu ul").hide();
-	var w = $(window).width();
-	if (w > 769) { 
+	if (window.matchMedia('screen and (min-width:770px)').matches) { 
 		// PC
 		$("#sub_menu>li").hover(function(){
 			$("ul:not(:animated)",this).slideToggle("fast");
@@ -80,16 +80,19 @@ $(function(){
 			$(this).toggleClass("active");
 			$("ul:not(:animated)",this).slideToggle("fast");
 			return false;
-		})
+		}),
 		// １階層のみの場合はクラス付与
 		$("#sub_menu>li:not(:has(ul))").addClass("only");
 	}
 });
 
-// パンくず・関連ワード 折りたたみ ----------
+
+//-----------------------------------------------------------------
+//           パンくず・関連ワード
+//-----------------------------------------------------------------
+//折りたたみ
 $(function(){
-	var w = $(window).width();
-	if (w > 485) { 
+	if (window.matchMedia('screen and (min-width:486px)').matches) { 
 	}else{
 		// タブレット・スマホ
 		$("#toggle_rap_top").click(function(){
@@ -123,10 +126,7 @@ $(function() {
     });
 });
 
-
-//-----------------------------------------------------------------
-//           リンクhover
-//-----------------------------------------------------------------
+//
 $(function() {
 	var ro = $('a, input');
 	ro.hover(

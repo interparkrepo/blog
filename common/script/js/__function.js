@@ -1,36 +1,9 @@
 //-----------------------------------------------------------------
 //           グローバルナビ、パンくず・関連ワード
 //-----------------------------------------------------------------
-
-// リサイズ時に表示・非表示を初期化 ----------
 $(function(){
-	var timer = false;
-	$(window).resize(function() {
-		if (timer !== false) {
-			clearTimeout(timer);
-		}
-		timer = setTimeout(function() {
-			console.log('resized');
-			var w = $(window).width();
-			if (w > 769) { 
-				// PC
-				$("#gnav_box").show();
-			} else if (w < 485) { 
-				// スマホ
-				$("#rap_top").hide();
-				$("#toggle_rap_top").removeClass("active");
-			} else {
-				// タブレット
-				$("#rap_top").show();
-				$("#gnav_box").hide();
-				$("#toggle").removeClass("active");
-			}
-		}, 200);
-	});
-});
 
 // グローバルナビ 上部固定 ----------
-$(function() {
     var nav = $('#gnav');
     //navの位置    
     var navTop = nav.offset().top;
@@ -44,31 +17,54 @@ $(function() {
             nav.removeClass('fixed')
         }
     });
-});
 
-// グローバルナビ 折りたたみ ----------
-$(function(){
-	var w = $(window).width();
-	if (w > 769) { 
-	}else{
-		$("#toggle").click(function(){
-			$(this).toggleClass("active");
-			$("#gnav_box").slideToggle("fast");
-			return false;
-		});
-	}
+// リサイズ時に初期化 ----------
+	var timer = false;
+	$(window).resize(function() {
+		if (timer !== false) {
+			clearTimeout(timer);
+		}
+		timer = setTimeout(function() {
+			console.log('resized');
+
+			var w = $(window).width();
+			if (w > 769) { 
+				// PC
+				$("#gnav_box").show();
+			} else if (w < 485) {
+				// スマホ
+				$("#rap_top").hide();
+				$("#toggle_rap_top").removeClass("active");
+			} else {
+				// タブレット
+				$("#rap_top").show();
+				$("#gnav_box").hide();
+				$("#toggle").removeClass("active");
+			}
+		}, 200);
+	});
+
+
+//-----------------------------------------------------------------
+//           グローバルナビ
+//-----------------------------------------------------------------
+
+
+//折りたたみ
+	$("#toggle").click(function(){
+		$(this).toggleClass("active");
+		$("#gnav_box").slideToggle("fast");
+		return false;
+	});
 	//開いた画面の高さを取得
 	var WindowHeight = $(window).height(); //WindowHeightは変数で任意の名前
 	$(function(){
 		$('#gnav_box').css('max-height',WindowHeight+'px');
 	});
-});
 
-// プルダウンメニュー ----------
-$(function(){
+// プルダウンメニュー
 	// ２階層以下は非表示にしておく
 	$("#sub_menu ul").hide();
-	var w = $(window).width();
 	if (w > 769) { 
 		// PC
 		$("#sub_menu>li").hover(function(){
@@ -80,16 +76,19 @@ $(function(){
 			$(this).toggleClass("active");
 			$("ul:not(:animated)",this).slideToggle("fast");
 			return false;
-		})
+		}),
 		// １階層のみの場合はクラス付与
 		$("#sub_menu>li:not(:has(ul))").addClass("only");
 	}
 });
 
-// パンくず・関連ワード 折りたたみ ----------
+
+//-----------------------------------------------------------------
+//           パンくず・関連ワード
+//-----------------------------------------------------------------
+//折りたたみ
 $(function(){
-	var w = $(window).width();
-	if (w > 485) { 
+	if (window.matchMedia('screen and (min-width:486px)').matches) { 
 	}else{
 		// タブレット・スマホ
 		$("#toggle_rap_top").click(function(){
@@ -123,10 +122,7 @@ $(function() {
     });
 });
 
-
-//-----------------------------------------------------------------
-//           リンクhover
-//-----------------------------------------------------------------
+//
 $(function() {
 	var ro = $('a, input');
 	ro.hover(

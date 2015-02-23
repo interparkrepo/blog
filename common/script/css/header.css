@@ -1,36 +1,239 @@
-/************************
-	 header
- ************************/
+/* ★ヘッダーのcssです */
+
+/*- ここから色の変更 -----------------------------------*/
 header {
+	/* ヘッダー全体の背景色 */
+	background-color:;
+}
+/* ///////////////////////// 
+	１段目　h1キーワード
+ ///////////////////////// */
+header #header_top_area {
+	/* １段目の背景色 */
 	background:#99C700;
-	width:100%;
+}
+header #header_top h1 {
+	/* １段目の文字色 */
+	color:#fff;
+	/* １段目の文字サイズ */
+	font-size:10px;
 }
 
 /* ///////////////////////// 
-	１段目
+	２段目　ロゴ・店舗情報
  ///////////////////////// */
-header #header_top_area {
-	background:#99C700;
+header #header_area {
+	/* ２段目の背景色 */
+	background-color:#F5F9E5;
+	/* ２段目に背景画像を使う場合 PC */
+	background-image:url("");
 }
+@media screen and (max-width: 769px) {
+header #header_area {
+	/* ２段目に背景画像を使う場合 タブレット */
+	background-image:url("");
+}
+}
+@media screen and (max-width: 485px) {
+header #header_area {
+	/* ２段目に背景画像を使う場合 スマホ */
+	background-image:url("");
+}
+}
+header #header {
+	/* ２段目のコンテンツ部分のみに背景画像を使う場合 PC */
+	background-image:url("");
+}
+
+
+/*- 右側 店舗情報 -----------------------------------*/
+/* 電話番号の上のテキスト */
+header #header #header_contact #header_tel_comment {
+	/* 文字色 */
+	color:;
+}
+/* 電話番号 */
+header #header #header_contact #header_tel {
+	/* 文字色 */
+	color:;
+}
+/* 電話番号 Tel */
+header #header #header_contact #header_tel span {
+	/* 文字色 */
+	color:;
+}
+/* 営業時間など */
+header #header #header_contact p {
+	/* 文字色 */
+	color:;
+}
+/* お問い合わせはこちら */
+header #header #header_contact a#header_mail {
+	/* 枠の太さ 種類 色 */
+	border:1px solid #fff;
+	/* 背景色 */
+	background:#FF9900;
+	/* 文字色 */
+	color:#fff;
+}
+
+/* ///////////////////////// 
+	３段目　グローバルナビ
+ ///////////////////////// */
+nav#gnav {
+	/* ３段目の背景色 */
+	background:#E0EEB2;
+}
+/*- システムで生成されるメニュー -----------------------------------*/
+nav#gnav #cate_menu_area {
+	/* メニューの背景色 */
+	background:#D5E895;
+}
+nav#gnav #cate_menu li {
+	/* メニューの各リンクに枠線をつける場合は指定 */
+	/* 例）border:1px solid blue; */
+	border:;
+	/* メニューの各リンクに背景色をつける場合は指定 */
+	background-color:;
+	/* メニューのアイコン */
+	background-image:url(../../../common/img/gnav.png);
+	background-position:5px 10px;
+	background-repeat:no-repeat;
+	/* メニューの文字色 */
+	color:#3E6600;
+}
+nav#gnav #cate_menu li:hover, nav#gnav ul li a:hover {
+	/* メニューにマウスを乗せたときの背景色 */
+	background-color:#BBDC4F;
+}
+
+/* ここからタブレット対応 */
+@media screen and (max-width: 769px) {
+/* ///////////////////////// 
+	３段目　グローバルナビ
+ ///////////////////////// */
+/* メニューを開くボタン */
+#toggle{
+	/* メニューを開くボタンの背景色 */
+	background-color: #E0EEB2;
+}
+#toggle a{
+	/* メニューを開くボタンの下の線の太さ 種類 色 */
+	border-bottom: 1px solid #ccc;
+	/* メニューを開くボタンの文字色 */
+	color: #3E6600;
+}
+#toggle:before{
+	/* メニューを開くボタンのアイコンの色１ */
+	border:4px solid #3E6600;
+}
+#toggle:after{
+	/* メニューを開くボタンのアイコンの色２ */
+	background: #3E6600;
+}
+}
+/* ここまでタブレット対応 */
+/*- ここまで色の変更 -----------------------------------*/
+
+
+
+
+
+/*- ここからテンプレートの変更（１段目の検索） -----------------------------------*/
+header #header_top .search-box {
+	/* ★１段目に検索を表示する場合は、下記のdisplay:none;をdisplay:block;に変更してください */
+	display:none;
+}
+#side .search-box {
+	/* ★サイドメニューの検索を非表示にする場合は、下記のdisplay:block;をdisplay:none;に変更してください */
+	display:block;
+}
+/*- ここまでテンプレートの変更（１段目の検索） -----------------------------------*/
+
+
+
+
+
+/*- ここからテンプレートの変更（プルダウンメニュー（手動更新）） -----------------------------------*/
+nav#gnav #sub_menu_area {
+	/* ★プルダウンメニューを使うときは、下記のdisplay:none;をdisplay:block;に変更してください */
+	display:block;
+}
+nav#gnav #sub_menu_area,
+nav#gnav #sub_menu>li.active.only {
+	/* メニューの背景色 */
+	background:#E0EEB2;
+}
+nav#gnav #sub_menu li {
+	/* メニューのアイコン */
+	background:url(../../../common/img/gnav.png) 5px 10px no-repeat;
+	/* メニューの各リンクに枠線をつける場合は指定 */
+	/* 例）border:1px solid #ccc; */
+	border:;
+	/* メニューの各リンクに背景色をつける場合は指定 */
+	background-color:;
+	/* メニューの文字色 */
+	color:#3E6600;
+}
+nav#gnav #sub_menu li:hover, nav#gnav ul li a:hover {
+	/* メニューにマウスを乗せたときの背景色 */
+	background-color:#BBDC4F;
+}
+nav#gnav #sub_menu ul, nav#gnav #sub_menu>li.active, nav#gnav #sub_menu>li.active.only:hover {
+	/* メニュー２階層目の背景色 */
+	background-color:#BBDC4F;
+}
+nav#gnav #sub_menu ul li:hover, nav#gnav #sub_menu ul li a:hover {
+	/* メニュー２階層目にマウスを乗せたときの背景色 */
+	background-color:#99C700;
+}
+
+/* ここからタブレット・スマホ対応 */
+@media screen and (max-width: 769px) {
+/*- プルダウンメニュー（手動更新） -----*/
+nav#gnav #sub_menu ul {
+	/* プルダウンメニュー２階層目の線の太さ 種類 色 */
+	border-top:1px dashed #fff;
+}
+nav#gnav #sub_menu>li:before {
+	/* プルダウンメニュー２階層目の上の線の太さ 種類 色 */
+	border-top: 2px solid #999;
+	border-right: 2px solid #999;
+}
+}
+/* ここまでタブレット・スマホ対応 */
+
+/*- ここまでテンプレートの変更（プルダウンメニュー（手動更新）） -----------------------------------*/
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////// 
+	以下を変更するとテンプレートが崩れる恐れがありますので、ご注意ください
+ /////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+header {
+	width:100%;
+}
+/* ///////////////////////// 
+	１段目　h1キーワード
+ ///////////////////////// */
 header #header_top {
 	width:980px;
 	margin:0 auto;
 	overflow:hidden;
 }
-header #header_top h1 {
-	font-size:10px;
-	color:#fff;
-}
-
-/* Googleカスタム検索 */
+/*- Googleカスタム検索 -----------------------------------*/
 header #header_top .search-box {
 	width:250px;
-	display:block;
 	float:right;
 	margin-top:5px;
 	margin-left:10px;
-
-	display:none;
 }
 header #header_top .google-search .gsc-input-box {
 	height:20px;
@@ -58,52 +261,59 @@ header #header_top .google-search input.gsc-search-button {
 }
 
 /* ///////////////////////// 
-	２段目
+	２段目　ロゴ・店舗情報
  ///////////////////////// */
 header #header_area {
-	background:#F5F9E5;
+	-moz-background-size:cover;
+	background-size:cover;
+	background-position:center top;
+	background-repeat:no-repeat;
 	width:100%;
 }
 header #header {
-	width:980px;
-	padding:10px 0;
+	-moz-background-size:cover;
+	background-size:cover;
+	background-position:center top;
+	background-repeat:no-repeat;
+	width:970px;
+	padding:10px 5px;
 	margin:0 auto;
 	overflow:hidden;
 }
+/*- 左側 ロゴ -----------------------------------*/
 header #header #header_info {
 	max-width:520px;
 	float:left;
 	display:inline-block;
 	overflow:hidden;
 }
-header #header #header_info .logo {
-	float:left;
-	display:inline-block;
-}
+/*- 右側 店舗情報 -----------------------------------*/
 header #header #header_contact {
 	width:420px;
 	float:right;
 	position:relative;
 	display:inline-block;
 }
+/* 電話番号の上のテキスト */
 header #header #header_contact #header_tel_comment {
 	font-size:12px;
 	font-weight:bold;
 }
+/* 電話番号 */
 header #header #header_contact #header_tel {
 	font-size:23px;
 	font-weight:bold;
 }
+/* 電話番号 Tel */
 header #header #header_contact #header_tel span {
 	font-size:15px;
 }
+/* 営業時間など */
 header #header #header_contact p {
 	font-size:11px;
 }
+/* お問い合わせはこちら */
 header #header #header_contact a#header_mail {
-	border:1px solid #fff;
-	background:#FF9900;
-	color:#fff;
 	font-weight:bold;
 	padding:3px;
 	display:block;
@@ -119,7 +329,6 @@ header #header #header_contact a#header_mail img {
 	margin:0 5px;
 }
 
-
 /* ///////////////////////// 
 	３段目　グローバルナビ
  ///////////////////////// */
@@ -127,16 +336,15 @@ header #header #header_contact a#header_mail img {
 	display:none;
 }
 nav#gnav {
-	background:#E0EEB2;
 	width:100%;
 	margin-bottom:10px;
 	z-index:10;
 }
-nav#gnav #sub_menu_area {
-	background:#E0EEB2;
-}
-nav#gnav #cate_menu_area {
-	background:#D5E895;
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 nav#gnav ul {
 	width:980px;
@@ -145,66 +353,63 @@ nav#gnav ul {
 }
 nav#gnav #gnav_box ul {
 	line-height:0;
+	overflow:hidden;
 }
 nav#gnav ul li {
-	background:url(../../../common/img/gnav.png) 0 10px no-repeat;
-	color:#3E6600;
 	font-size:10px;
 	font-weight:bold;
 	display:inline-block;
+	float:left;
 }
 nav#gnav ul li a {
-	color:#3E6600;
+	color:inherit;
 	display:block;
-	padding:10px 5px 10px 20px;
+	padding:10px 5px 10px 25px;
 }
 nav#gnav ul li:hover, nav#gnav ul li a:hover {
-	background-color:#BBDC4F;
 	text-decoration:none;
 }
-
-/* グローバルナビ　ページ上部固定 */
-.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-/* タブレット・スマホ用　ページ上部検索窓 */
 nav#gnav .google-search {
 	display:none;
+}
+
+/*- プルダウンメニュー（手動更新） -----------------------------------*/
+nav#gnav #sub_menu ul {
+	width:auto;
+	display:inline;
+	position:absolute;
+	z-index:999;
+}
+nav#gnav #sub_menu ul li {
+	background-position:10px 10px;
+	display:block;
+	float:none;
+}
+nav#gnav #sub_menu ul li a {
+	padding:10px 15px 10px 20px;
+	margin-left:10px;
 }
 
 
 /* ここからタブレット対応 */
 @media screen and (max-width: 769px) {
 /* ///////////////////////// 
-	１段目
+	１段目　h1キーワード
  ///////////////////////// */
 header #header_top {
 	width:95%;
 	margin:0 auto;
 }
 header #header_top .search-box {
-	width:300px;
-	float:right;
-	margin-left:10px;
-/*	display:block;*/
-}
-header #header_top .search-box .gsc-control-cse {
-	background:none;
-	border:none;
+	display:none;
 }
 
 /* ///////////////////////// 
-	２段目
+	２段目　ロゴ・店舗情報
  ///////////////////////// */
 header #header {
 	width:95%;
 	margin:0 auto;
-}
-header #header #header_info {
 }
 header #header #header_contact {
 	width:255px;
@@ -219,49 +424,41 @@ header #header #header_contact a#header_mail {
 /* ///////////////////////// 
 	３段目　グローバルナビ
  ///////////////////////// */
+/* メニューを開くボタン */
 #toggle{
-  display: block;
-  position: relative;
-  width: 100%;
-  background: #E0EEB2;
+	display: block;
+	position: relative;
+	width: 100%;
 }
 #toggle a{
-  display: block;
-  position: relative;
-  padding: 12px 0 10px;
-  border-bottom: 1px solid #99C700;
-  color: #3E6600;
-  font-weight:bold;
-  text-align: center;
-  text-decoration: none;
-  line-height:100%;
+	font-weight:bold;
+	text-align: center;
+	text-decoration: none;
+	line-height:100%;
+	display: block;
+	position: relative;
+	padding: 12px 0 10px;
 }
 #toggle:before{
-	display: block;
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 10px;
+	border-right:none;
+	border-left:none;
 	width: 20px;
-	height: 20px;
-	margin-top: -10px;
-	background: #3E6600;
-}
-#toggle a:before, #toggle a:after{
+	height: 10px;
 	display: block;
 	content: "";
 	position: absolute;
 	top: 50%;
-	left: 10px;
+	left:10px;
+	margin-top: -10px;
+}
+#toggle:after{
 	width: 20px;
 	height: 4px;
-	background: #E0EEB2;
-}
-#toggle a:before{
-	margin-top: -6px;
-}
-#toggle a:after{
-	margin-top: 2px;
+	display: block;
+	content: "";
+	position: absolute;
+	top: 16px;
+	left:10px;
 }
 #toggle .active{
 	display:none;
@@ -272,7 +469,6 @@ header #header #header_contact a#header_mail {
 #toggle.active .active{
 	display:inline;
 }
-
 nav#gnav {
 	width:100%;
 }
@@ -289,39 +485,56 @@ nav#gnav ul li {
 	background:none;
 	font-size:13px;
 	position:relative;
+	display:block;
+	float:none;
 }
 nav#gnav ul li a {
 	padding:10px;
 	padding-left:10px;
-}
-nav#gnav ul li span.touch-button {
-	position:absolute;
-	display:block;
-	top:10px;
-	right:10px;
-	cursor:pointer;
-}
-
-
-
-nav#gnav ul li {
-	display:block;
-}
-nav#gnav ul li a {
 	display:inline-block;
 }
-
-/* タブレット・スマホ用　ページ上部検索窓 */
 nav#gnav .google-search {
 	display:block;
 }
 
+/*- プルダウンメニュー（手動更新） -----------------------------------*/
+nav#gnav #sub_menu ul {
+	width:100%;
+	display:block;
+	position:relative;
 }
+nav#gnav #sub_menu li {
+	background-image:none;
+}
+nav#gnav #sub_menu>li:before {
+	content:"";
+	height:6px;
+	width:6px;
+	transform:rotate(135deg);
+	-webkit-transform: rotate(135deg);
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+nav#gnav #sub_menu>li.active:before {
+	transform:rotate(315deg);
+	-webkit-transform: rotate(315deg);
+	top:15px;
+}
+nav#gnav #sub_menu>li.only:before {
+	display:none;
+}
+/*- システムで生成されるメニュー -----------------------------------*/
+nav#gnav #cate_menu li {
+	background-image:none;
+}
+}
+/* ここまでタブレット対応 */
 
 /* ここからスマートフォン対応 */
 @media screen and (max-width: 485px) {
 /* ///////////////////////// 
-	１段目
+	１段目　h1キーワード
  ///////////////////////// */
 header #header_top_area {
 	display:none;
@@ -332,7 +545,7 @@ header #header_top .search-box {
 	margin-left:0;
 }
 /* ///////////////////////// 
-	２段目
+	２段目　ロゴ・店舗情報
  ///////////////////////// */
 header #header_area {
 	border-top:3px solid #99C700;
@@ -359,3 +572,4 @@ header #header #header_contact a#header_mail {
 	text-align:center;
 }
 }
+/* ここまでスマートフォン対応 */

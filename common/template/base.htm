@@ -17,6 +17,7 @@
 <script src="../../common/script/js/jquery-ui.js"></script>
 <script src="../../common/script/js/js.js"></script>
 <script src="../../common/script/js/function.js"></script>
+<script src="../../common/script/js/jquery.backgroundSize.js"></script>
 <!-- fancybox -->
 <script src="../../common/script/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 <script>
@@ -28,22 +29,24 @@ $(function() {
 	});
 });
 </script>
-<!-- portfolio.pack -->
-<!-- script src="../../common/script/js/portfolio.pack.min.js"></script -->
-<script>
-$(function() {
-	if (window.matchMedia( '(min-width: 484px)' ).matches) {
-	} else {
-		var p = $("#rap_top ul.tag").portfolio({
-			logger: true,
-		});
-		p.init();
-	};
-}); 
+<!-- ここからjq jQueryAutoHeight -->
+<script src="../../common/script/js/jQueryAutoHeight.js"></script>
+<script type="text/javascript">
+var w = $(window).width();
+if (w > 769) { 
+	$(function(){
+		$('#rap .item .related_item .col5').autoHeight({column:5});
+		$('#rap .item .related_item .col4').autoHeight({column:4});
+		$('#rap .item .related_item .col3').autoHeight({column:3});
+		$('#rap .item .related_item .col2').autoHeight({column:2});
+		$('#rap .item .related_item .col2_2').autoHeight({column:1});
+	});
+} else {
+}
 </script>
 <!-- Googleカスタム検索 -->
 <script>
-  (function() {
+(function() {
 //  ↓検索エンジンIDを書き換える
     var cx = '001295886434854555549:7plppjukchw';
 //  var cx = '検索エンジンID';

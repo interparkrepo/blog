@@ -1,9 +1,35 @@
-/************************
-	footer
- ************************/
+/* ★フッターのcssです */
+
+/*- ここから色の変更 -----------------------------------*/
 footer {
+	/* フッターの上の線の太さ 種類 色 */
 	border-top:3px solid #ccc;
+	/* フッターの背景色 */
 	background:#666;
+}
+footer #footer ul li, footer small {
+	/* フッターの文字色 */
+	color:#fff;
+}
+footer #footer ul li {
+	/* フッターリンクの区切り線の太さ 種類 色 */
+	border-right:1px solid #fff;
+}
+/*- ここまで色の変更 -----------------------------------*/
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////// 
+	以下を変更するとテンプレートが崩れる恐れがありますので、ご注意ください
+ /////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+footer {
 	width:100%;
 	clear:both;
 }
@@ -12,39 +38,35 @@ footer #footer {
 	margin:0 auto;
 	overflow:hidden;
 }
-
-/**/
+/* フッターリンク */
 footer #footer ul {
 	float:left;
 	margin:5px 0;
 	display:inline-block;
 }
 footer #footer ul li {
-	border-right:1px solid #fff;
-	color:#fff;
 	font-size:12px;
 	padding-right:10px;
 	margin-right:5px;
 	display:inline-block;
 }
 footer #footer ul li a {
-	color:#fff;
+	color:inherit;
 }
-
 /* Copyright */
 footer small {
 	font-size:12px;
-	color:#fff;
 	float:right;
 	display:inline-block;
 	margin:5px 0;
 }
 
 
-
+/* ここからタブレット・スマホ対応 */
 @media screen and (max-width: 769px) {
 footer #footer {
 	width:95%;
 	margin:0 auto;
 }
 }
+/* ここまでタブレット・スマホ対応 */

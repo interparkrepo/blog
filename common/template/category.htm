@@ -17,6 +17,7 @@
 <script src="../../common/script/js/jquery-ui.js"></script>
 <script src="../../common/script/js/js.js"></script>
 <script src="../../common/script/js/function.js"></script>
+<script src="../../common/script/js/jquery.backgroundSize.js"></script>
 <!-- fancybox -->
 <script src="../../common/script/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
 <script>
@@ -28,22 +29,24 @@ $(function() {
 	});
 });
 </script>
-<!-- portfolio.pack -->
-<!-- script src="../../common/script/js/portfolio.pack.min.js"></script -->
-<script>
-$(function() {
-	if (window.matchMedia( '(min-width: 484px)' ).matches) {
-	} else {
-		var p = $("#rap_top ul.tag").portfolio({
-			logger: true,
-		});
-		p.init();
-	};
-}); 
+<!-- ここからjq jQueryAutoHeight -->
+<script src="../../common/script/js/jQueryAutoHeight.js"></script>
+<script type="text/javascript">
+var w = $(window).width();
+if (w > 769) { 
+	$(function(){
+		$('#rap .item .related_item .col5').autoHeight({column:5});
+		$('#rap .item .related_item .col4').autoHeight({column:4});
+		$('#rap .item .related_item .col3').autoHeight({column:3});
+		$('#rap .item .related_item .col2').autoHeight({column:2});
+		$('#rap .item .related_item .col2_2').autoHeight({column:1});
+	});
+} else {
+}
 </script>
 <!-- Googleカスタム検索 -->
 <script>
-  (function() {
+(function() {
 //  ↓検索エンジンIDを書き換える
     var cx = '001295886434854555549:7plppjukchw';
 //  var cx = '検索エンジンID';
@@ -58,6 +61,19 @@ $(function() {
   })();
 </script>
 <!-- Googleカスタム検索 -->
+
+<style>
+#rap_top {
+	border-left:none;
+	padding-left:0;
+}
+#rap h2.search_name {
+	border-left:5px solid #CCE37F;
+	background:none;
+	padding-left:5px;
+	padding-bottom:0;
+}
+</style>
 </head>
 
 <body>
@@ -134,14 +150,16 @@ $(function() {
 		<li><a href="">車高調</a></li>
 		<li><a href="">純正ブラック</a></li>
 	</ul>
-	<h2 class="search_name">「JZZ30 ソアラ」の一覧</h2>
 </div>
+<h2 class="search_name">「JZZ30 ソアラ」の一覧</h2>
 
-<p class="comment">
-	こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。
-</p>
+<div class="comment_top"><!-- ここから自由入力エリア -->
+	<p class="text_box1">
+		こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。
+	</p>
+<!-- ここまで自由入力エリア --></div>
 
-<article class="item list">
+<article class="item list off">
 	<a href="" class="photo"><img src="../../common/img/sample.jpg" alt=""></a>
 	<h1><a href="">JZZ30ソアラ2500ツインターボ　車検上げ完了　本日納車。</a></h1>
 	<div class="date">
@@ -149,7 +167,9 @@ $(function() {
 		<span class="update">更新日：2015年01月30日</span>
 	</div>
 	<p class="short_text"><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</a></p>
-	<p class="tag"><a href="">2500ツインターボ</a>, <a href="">サンルーフ</a>, <a href="">ナビ付き</a>, <a href="">VVT-ｉターボ</a>,</p>
+	<ul class="tag"><li><a href="">2500ツインターボ</a></li><li><a href="">サンルーフ</a></li><li><a href="">ナビ付き</a></li><li><a href="">VVT-ｉターボ</a></li></ul>
+	<div class="cate"><a href="">JZZ30 ソアラ</a>, <a href="">JZZ30 ソアラ</a>, <a href="">JZZ30 ソアラ</a></div>
+
 
 	<div>O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</div>
 	
@@ -160,7 +180,7 @@ $(function() {
 
 </article><!-- /.item -->
 
-<article class="item list">
+<article class="item list off">
 	<a href="" class="photo"><img src="../../common/img/sample.jpg" alt=""></a>
 	<h1><a href="">JZZ30ソアラ2500ツインターボ　車検上げ完了　本日納車。</a></h1>
 	<div class="date">
@@ -168,7 +188,8 @@ $(function() {
 		<span class="update">更新日：2015年01月30日</span>
 	</div>
 	<p class="short_text"><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</a></p>
-	<p class="tag"><a href="">2500ツインターボ</a>, <a href="">サンルーフ</a>, <a href="">ナビ付き</a>, <a href="">VVT-ｉターボ</a>,</p>
+	<ul class="tag"><li><a href="">2500ツインターボ</a></li><li><a href="">サンルーフ</a></li><li><a href="">ナビ付き</a></li><li><a href="">VVT-ｉターボ</a></li></ul>
+	<div class="cate"><a href="">JZZ30 ソアラ</a>, <a href="">JZZ30 ソアラ</a>, <a href="">JZZ30 ソアラ</a></div>
 
 	<div>O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</div>
 	
@@ -188,7 +209,8 @@ $(function() {
 		<span class="update">更新日：2015年01月30日</span>
 	</div>
 	<p class="short_text"><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</a></p>
-	<p class="tag"><a href="">2500ツインターボ</a>, <a href="">サンルーフ</a>, <a href="">ナビ付き</a>, <a href="">VVT-ｉターボ</a>,</p>
+	<ul class="tag"><li><a href="">2500ツインターボ</a></li><li><a href="">サンルーフ</a></li><li><a href="">ナビ付き</a></li><li><a href="">VVT-ｉターボ</a></li></ul>
+	<div class="cate"><a href="">JZZ30 ソアラ</a>, <a href="">JZZ30 ソアラ</a>, <a href="">JZZ30 ソアラ</a></div>
 
 	<div>O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</div>
 	
@@ -208,7 +230,8 @@ $(function() {
 		<span class="update">更新日：2015年01月30日</span>
 	</div>
 	<p class="short_text"><a href="">O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</a></p>
-	<p class="tag"><a href="">2500ツインターボ</a>, <a href="">サンルーフ</a>, <a href="">ナビ付き</a>, <a href="">VVT-ｉターボ</a>,</p>
+	<ul class="tag"><li><a href="">2500ツインターボ</a></li><li><a href="">サンルーフ</a></li><li><a href="">ナビ付き</a></li><li><a href="">VVT-ｉターボ</a></li></ul>
+	<div class="cate"><a href="">JZZ30 ソアラ</a>, <a href="">JZZ30 ソアラ</a>, <a href="">JZZ30 ソアラ</a></div>
 
 	<div>O様にお買い上げ頂いたJZZ30ソアラ2500ツインターボの車検上げ・納車準備が終わり本日納車になります。</div>
 	
@@ -220,9 +243,11 @@ $(function() {
 </article><!-- /.item -->
 
 
-<p class="comment btm">
-	こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。
-</p>
+<div class="comment_btm"><!-- ここから自由入力エリア -->
+	<p class="text_box1">
+		こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。こちらは自由入力エリアです。
+	</p>
+<!-- ここまで自由入力エリア --></div>
 
 </div><!-- /#rap -->
 
