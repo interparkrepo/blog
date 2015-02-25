@@ -31,11 +31,6 @@ a{
 a:hover{
 	text-decoration:underline;
 }
-a:hover img{
-  filter: alpha(opacity=70);
-  -moz-opacity:0.70;
-  opacity:0.70;
-}
 img{border:none;}
 
 

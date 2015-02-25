@@ -16,10 +16,15 @@
 /************************
 	パンくず・関連ワード
  ************************/
-#rap_top {
-	/* パンくず・関連ワードの左の線の太さ 種類 色 */
-	border-left:5px solid #CCE37F;
+#rap_top .pan .now {
+	/* パンくずの現在地の文字色 */
+	color:#99C700;
 }
+#rap_top ul.tag li.on {
+	/* 選択されたタグの背景色 */
+	background:#E0EEB2;
+}
+
 /* ここからスマートフォン対応 */
 @media screen and (max-width: 485px) {
 #toggle_rap_top{
@@ -37,8 +42,15 @@
 }
 
 /************************
-	記事スタイル
+	記事スタイル　詳細・共通
  ************************/
+/* 詳細ページ記事タイトル・一覧ページタイトル */
+#rap article.item h1,
+#rap h2.search_name {
+	/* 装飾（左線） */
+	border-left:5px solid #CCE37F;
+}
+
 /* 見出し（中） */
 #rap article.item h3:before {
 	/* 見出し（中）の装飾の色 */
@@ -99,7 +111,6 @@
 	display:none;
 }
 #rap_top {
-	padding-left:10px;
 	margin-bottom:30px;
 	display:block;
 }
@@ -141,9 +152,20 @@
 	color:#ccc;
 }
 #rap_top .pan .now {
-	color:#333;
 	font-weight:bold;
 }
+#rap_top .pan .now.on:after {
+	border-top: 1px solid #777;
+	border-right: 1px solid #777;
+	content:"";
+	height:5px;
+	width:5px;
+	transform:rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	display:inline-block;
+	margin:0 0 2px 5px;
+}
+
 /* パンくず下のタグ */
 #rap_top ul.tag {
 	background:url(../../../common/img/tag.png) left top no-repeat;
@@ -165,13 +187,12 @@ only screen and (min-device-pixel-ratio: 2) {
 }
 /* カテゴリ一覧 タイトル */
 #rap h2.search_name {
-	background:url(../../../common/img/search.png) left top no-repeat;
+	background:url(../../../common/img/search.png) 10px top no-repeat;
 	min-height:26px;
 	color:#666;
 	font-size:20px;
 	font-weight:bold;
-	padding-bottom:10px;
-	padding-left:30px;
+	padding-left:40px;
 	margin-bottom:20px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), 
@@ -229,7 +250,7 @@ only screen and (min-device-pixel-ratio: 2) {
 }
 #rap_top {
 	background:#fff;
-	border-bottom:1px solid #ccc;
+/*	border-bottom:1px solid #ccc;*/
 	border-left:none;
 	display:none;
 	width:initial;
@@ -253,6 +274,7 @@ only screen and (min-device-pixel-ratio: 2) {
 #rap .item h1 {
 	font-size:20px;
 	font-weight:bold;
+	padding-left:10px;
 }
 /* 日付 */
 #rap .item .date {
@@ -449,6 +471,9 @@ behavior: url(../../../common/script/js/PIE.htc);
 	margin-top:30px;
 }
 
+#rap .item.list h1 {
+	border-left:none;
+}
 #rap .item.list {
 	border-bottom:3px solid #ddd;
 	padding-top:30px;
@@ -477,6 +502,7 @@ behavior: url(../../../common/script/js/PIE.htc);
 	width:160px;
 	float:left;
 	margin-right:5px;
+	margin-bottom:5px;
 	display:block;
 }
 #rap .item.list.off .photo img {
@@ -492,30 +518,30 @@ behavior: url(../../../common/script/js/PIE.htc);
 #rap .item.list.off .date {
 	display:block;
 }
-#rap .item.list.off .tag {
-	color:#999;
-	font-size:12px;
-	margin-top:10px;
-	margin-left:0;
-}
-#rap .item.list.off .tag a {
-	color:inherit;
-}
+/* カテゴリ */
 #rap .item.list.off div.cate {
-	background:url(../../../common/img/cate.png) left top no-repeat;
 	color:#999;
 	font-size:12px;
 	display:block;
-	padding-left:30px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2), 
-only screen and (min-device-pixel-ratio: 2) {
-#rap .item.list.off .cate {
-	background:url(../../../common/img/cate@2x.png) left top no-repeat;
-	background-size: 21px 13px;
-}
+	margin-top:10px;
+	margin-bottom:5px;
 }
 #rap .item.list.off .cate a {
+	color:inherit;
+}
+/* タグ */
+#rap .item.list.off .tag {
+	color:#999;
+	font-size:12px;
+	margin-left:0;
+}
+#rap .item.list.off .tag li {
+	font-size:11px;
+	padding:2px 4px;
+	margin-right:5px;
+	margin-bottom:5px;
+}
+#rap .item.list.off .tag a {
 	color:inherit;
 }
 
@@ -552,20 +578,6 @@ only screen and (min-device-pixel-ratio: 2) {
 #rap .item.list .short_text,
 #rap .item.list .date {
 	display:block;
-}
-#rap .item.list.off .tag {
-	color:#999;
-	font-size:12px;
-	margin-top:10px;
-}
-#rap .item.list.off li {
-	font-size:11px;
-	padding:2px 4px;
-	margin-right:5px;
-	margin-bottom:5px;
-}
-#rap .item.list.off .tag a {
-	color:inherit;
 }
 }
 /* ここまでスマートフォン対応 */

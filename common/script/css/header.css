@@ -52,12 +52,12 @@ header #header #header_contact #header_tel_comment {
 	/* 文字色 */
 	color:;
 }
-/* 電話番号 */
+/* 電話番号 Tel: */
 header #header #header_contact #header_tel {
 	/* 文字色 */
 	color:;
 }
-/* 電話番号 Tel */
+/* 電話番号 */
 header #header #header_contact #header_tel span {
 	/* 文字色 */
 	color:;
@@ -299,14 +299,15 @@ header #header #header_contact #header_tel_comment {
 	font-size:12px;
 	font-weight:bold;
 }
-/* 電話番号 */
+/* 電話番号 Tel: */
 header #header #header_contact #header_tel {
-	font-size:23px;
-	font-weight:bold;
-}
-/* 電話番号 Tel */
-header #header #header_contact #header_tel span {
 	font-size:15px;
+	font-weight:bold;
+	margin:4px 0;
+}
+/* 電話番号 */
+header #header #header_contact #header_tel span {
+	font-size:23px;
 }
 /* 営業時間など */
 header #header #header_contact p {
